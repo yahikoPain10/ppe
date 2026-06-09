@@ -1,0 +1,21 @@
+# Dépendances
+node_modules/
+cours/node_modules/
+
+# Variables d'environnement
+.env
+
+# Build Docusaurus
+cours/.docusaurus/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

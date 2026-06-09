@@ -1,0 +1,23 @@
+{
+  "name": "cours-app",
+  "version": "1.0.0",
+  "description": "Plateforme de cours avec Docusaurus, espace élève et espace prof",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "init-db": "node scripts/initDb.js",
+    "build:cours": "cd cours && npm run build",
+    "dev:cours": "cd cours && npm start"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}

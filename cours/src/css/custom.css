@@ -1,0 +1,152 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   custom.css — Personnalisation Docusaurus
+   Couleur primaire : vert (#2e7d32), cohérent avec le reste de l'application.
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Couleur primaire (light mode) ─────────────────────────────────────────── */
+:root {
+  --ifm-color-primary:          #2e7d32;
+  --ifm-color-primary-dark:     #276a2b;
+  --ifm-color-primary-darker:   #256429;
+  --ifm-color-primary-darkest:  #1e5220;
+  --ifm-color-primary-light:    #359039;
+  --ifm-color-primary-lighter:  #37963b;
+  --ifm-color-primary-lightest: #3faa44;
+
+  --ifm-code-font-size:         95%;
+  --ifm-font-family-base:       'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+
+  /* Réduire l'espace en haut du contenu principal */
+  --ifm-spacing-vertical:       1.25rem;
+}
+
+/* ── Couleur primaire (dark mode) ──────────────────────────────────────────── */
+[data-theme='dark'] {
+  --ifm-color-primary:          #66bb6a;
+  --ifm-color-primary-dark:     #57b05b;
+  --ifm-color-primary-darker:   #50aa54;
+  --ifm-color-primary-darkest:  #408d44;
+  --ifm-color-primary-light:    #75c278;
+  --ifm-color-primary-lighter:  #7ec581;
+  --ifm-color-primary-lightest: #9cd09e;
+
+  --ifm-background-color:       #18181a;
+  --ifm-background-surface-color: #242426;
+  --ifm-navbar-background-color:  #1b1b1d;
+}
+
+/* ── Import Google Font ─────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ── Navbar ─────────────────────────────────────────────────────────────────── */
+.navbar {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+/* Lien actif dans la navbar */
+.navbar__link--active {
+  color: var(--ifm-color-primary) !important;
+  font-weight: 600;
+}
+
+/* ── Sidebar gauche ─────────────────────────────────────────────────────────── */
+.menu__link {
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.menu__link--active {
+  font-weight: 600;
+}
+
+/* Catégories de la sidebar */
+.menu__list-item-collapsible > .menu__link {
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ifm-color-content-secondary);
+}
+
+.menu__list-item-collapsible > .menu__link:hover,
+.menu__list-item-collapsible > .menu__link--active {
+  color: var(--ifm-color-primary);
+  background: var(--ifm-menu-color-background-active);
+}
+
+/* ── Table des matières (right sidebar) ─────────────────────────────────────── */
+.table-of-contents__link {
+  font-size: 0.82rem;
+}
+
+.table-of-contents__link--active {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* ── Breadcrumb ─────────────────────────────────────────────────────────────── */
+.breadcrumbs__link {
+  font-size: 0.82rem;
+}
+
+/* ── Boutons Précédent / Suivant ─────────────────────────────────────────────── */
+.pagination-nav__link {
+  border-radius: 8px;
+  border: 1px solid var(--ifm-toc-border-color);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.12);
+}
+
+.pagination-nav__sublabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Code blocks ─────────────────────────────────────────────────────────────── */
+.prism-code {
+  font-size: 0.88rem;
+  border-radius: 8px;
+}
+
+/* ── Masquer les éléments non souhaités ──────────────────────────────────────── */
+
+/* Masquer "Modifier cette page", "Dernière mise à jour", etc. */
+.theme-doc-footer,
+.theme-last-updated,
+article footer {
+  display: none !important;
+}
+
+/* Masquer le lien GitHub (s'il apparaît via themeConfig) */
+.navbar__item.navbar__link[href*="github"] {
+  display: none !important;
+}
+
+/* Masquer la ligne de séparation au-dessus du footer supprimé */
+.theme-doc-footer-edit-meta-row {
+  display: none !important;
+}
+
+/* ── Contenu principal ───────────────────────────────────────────────────────── */
+article h1:first-child {
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+article p {
+  line-height: 1.75;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .navbar__logo {
+    max-height: 24px;
+  }
+}
