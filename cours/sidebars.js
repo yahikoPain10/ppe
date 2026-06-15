@@ -8,8 +8,13 @@ const sidebars = {
       label: 'Unité 3 : Tableur',
       collapsed: false,           // Ouvert par défaut
       items: [
-        'unite3-tableur/lesson1',
-        'unite3-tableur/lesson2',
+        'unite3-tableur/notion-tableur',
+        'unite3-tableur/classeur-feuilles-cellules',
+        'unite3-tableur/saisie-donnees',
+        'unite3-tableur/formules-fonctions',
+        'unite3-tableur/mise-en-forme',
+        'unite3-tableur/graphiques',
+        'unite3-tableur/pratique-en-ligne',
       ],
     },
 
@@ -17,45 +22,13 @@ const sidebars = {
     {
       type: 'category',
       label: 'Unité 4 : Programmation Logo',
-      collapsed: false,
+      collapsed: true,
       items: [
-        'unite4-programmation-logo/lesson1',
-        'unite4-programmation-logo/lesson2',
+        'unite4-programmation-logo/primitives-base',
+        'unite4-programmation-logo/pratique-en-ligne',
       ],
     },
   ],
 };
 
 module.exports = sidebars;
-
-/*
- * ══════════════════════════════════════════════════════════════════════════════
- * GUIDE : Comment modifier la structure de la sidebar
- * ══════════════════════════════════════════════════════════════════════════════
- *
- * 1) AJOUTER UNE LEÇON dans une unité existante :
- *    - Créez le fichier : docs/unite3-tableur/lesson3.md
- *    - Ajoutez 'unite3-tableur/lesson3' dans le tableau items correspondant
- *
- * 2) AJOUTER UNE NOUVELLE UNITÉ :
- *    - Ajoutez un nouvel objet { type: 'category', ... } dans coursSidebar
- *    - Exemple :
- *        {
- *          type: 'category',
- *          label: 'Unité 5 : Traitement de texte',
- *          collapsed: false,
- *          items: [
- *            'unite5-traitement-texte/lesson1',
- *          ],
- *        },
- *    - Créez le dossier : docs/unite5-traitement-texte/
- *    - Créez le fichier : docs/unite5-traitement-texte/lesson1.md
- *
- * 3) RENOMMER un élément dans la sidebar :
- *    Modifiez uniquement le champ `label`, pas le chemin du fichier.
- *
- * 4) FERMER une catégorie par défaut :
- *    Passez collapsed: true
- *
- * ══════════════════════════════════════════════════════════════════════════════
- */
