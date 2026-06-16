@@ -7,7 +7,7 @@ sidebar_position: 1
 
 # Primitives de base
 
-## Notion de programmation
+## Def programmation
 ![](/def-programmation.png)
 
 ## Le langage Logo et ses primitives
